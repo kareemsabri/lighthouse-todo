@@ -25,10 +25,12 @@ class TodoViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func didToggleCompletedSwitch(_ sender: UISwitch) {
         //@todo: set todo to completed, save it
+        //this requires server auth - see PATCH on todos
     }
     
     @IBAction func didTapDeleteTodoButton(_ sender: UIButton) {
         //@todo: delete todo, get outta here
+        //this requires server auth - see PATCH on todos
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
