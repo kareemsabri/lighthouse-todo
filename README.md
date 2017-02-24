@@ -3,6 +3,12 @@ iOS client for Todos BE
 
 For this interactive lecture, you'll use a Todo List API to build a Todo app using Alamofire.
 
+First, fork or clone this repository
+
+You'll find a UI and some model classes - see the code for comments and tasks
+
+Resources you'll need:
+
 API Docs: https://lighthouse-todos.herokuapp.com/
 
 Alamofire:
