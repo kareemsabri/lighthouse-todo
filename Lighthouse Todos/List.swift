@@ -11,6 +11,7 @@ import Foundation
 final class List: Requestable {
     init?(response: HTTPURLResponse, representation: Any) {
         //@todo: init a list with response from server
+        //see User.swift for example
     }
 
     

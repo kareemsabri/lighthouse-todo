@@ -11,6 +11,7 @@ import Foundation
 final class Todo: Requestable {
     init?(response: HTTPURLResponse, representation: Any) {
         //@todo: init a todo with response from server
+        //see User.swift for example
     }
 
     
