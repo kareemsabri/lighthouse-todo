@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     static let identifier = "ListsViewController"
@@ -21,6 +22,11 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         navigationItem.title = "My Lists"
         //@todo: fetch lists for user
+        self.user.getLists { (lists) in
+            self.lists = lists
+            self.listsTableView.reloadData()
+        }
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

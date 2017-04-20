@@ -13,6 +13,4 @@ final class Todo: Requestable {
         //@todo: init a todo with response from server
         //see User.swift for example
     }
-
-    
 }
