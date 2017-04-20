@@ -6,6 +6,7 @@
 //  Copyright © 2017 Kareem Sabri. All rights reserved.
 //
 
+import Alamofire
 import UIKit
 
 class RegisterViewController: UIViewController {
@@ -15,8 +16,12 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var registerButton: UIButton!
     
     @IBAction func didTapRegisterButton(_ sender: UIButton) {
-        //@todo: create a user and save it to server
-        //once done, go to lists of user
+        //@create a user and save it to server
+        Alamofire.request(User.endpoint, method: .post, parameters: ["email": emailTextField.text!], encoding: JSONEncoding.default, headers: nil).responseObject { (response: DataResponse<User>) in
+            if let user = response.result.value as? User {
+                //@todo: go to lists of user
+            }
+        }
     }
     
     private func goToListsOfUser(_ user: User) {
