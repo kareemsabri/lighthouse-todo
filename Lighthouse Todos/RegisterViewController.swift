@@ -17,7 +17,7 @@ class RegisterViewController: UIViewController {
     
     @IBAction func didTapRegisterButton(_ sender: UIButton) {
         //@create a user and save it to server
-        Alamofire.request(User.endpoint, method: .post, parameters: ["email": emailTextField.text!], encoding: JSONEncoding.default, headers: nil).responseObject { (response: DataResponse<User>) in
+        Alamofire.request(User.endpoint, method: .post, parameters: ["email": emailTextField.text!, "password": passwordTextField.text!], encoding: JSONEncoding.default, headers: nil).responseObject { (response: DataResponse<User>) in
             
             if let user = response.result.value {
                 //@todo: go to lists of user
